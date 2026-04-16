@@ -163,6 +163,64 @@ button, input {
     gap: 2rem;
 }
 
+.section-welcome {
+    background: linear-gradient(135deg, rgba(124,92,255,0.18), rgba(79,123,255,0.12));
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 28px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-welcome::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle at top left, rgba(255,255,255,0.15), transparent 22%), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 120px 120px, 40px 40px;
+    opacity: 0.65;
+    pointer-events: none;
+}
+
+.welcome-card {
+    position: relative;
+    z-index: 1;
+    max-width: 720px;
+}
+
+.eyebrow {
+    margin: 0 0 0.75rem;
+    color: #c3c9ff;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.85rem;
+}
+
+.section-welcome h2 {
+    margin: 0 0 1rem;
+    font-size: 2.3rem;
+}
+
+.section-welcome p {
+    margin: 0 0 1.25rem;
+    color: rgba(255,255,255,0.85);
+    max-width: 720px;
+}
+
+.welcome-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: rgba(255,255,255,0.8);
+    font-size: 0.95rem;
+}
+
+.welcome-meta span {
+    background: rgba(255,255,255,0.08);
+    padding: 0.8rem 1rem;
+    border-radius: 14px;
+}
+
 .section-header,
 .panel-header {
     display: flex;
