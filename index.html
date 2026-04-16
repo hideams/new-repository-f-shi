@@ -3,79 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Architect Engineer Platform</title>
+    <title>Architect Engineer Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Comprehensive Architect Engineer Tool</h1>
-        <nav>
-            <ul>
-                <li><a href="#dashboard">Dashboard</a></li>
-                <li><a href="#design">Design Tools</a></li>
-                <li><a href="#calculations">Calculations</a></li>
-                <li><a href="#resources">Resources</a></li>
-                <li><a href="#projects">Project Management</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="dashboard">
-            <h2>Dashboard</h2>
-            <p>Welcome to the Architect Engineer Platform. Manage your projects, design plans, and calculate specifications efficiently.</p>
-            <div class="stats">
-                <div class="stat">
-                    <h3>Total Projects</h3>
-                    <p id="totalProjects">0</p>
-                </div>
-                <div class="stat">
-                    <h3>Completed Designs</h3>
-                    <p id="completedDesigns">0</p>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">A</div>
+                <div>
+                    <p>Architect</p>
+                    <span>Engineer Hub</span>
                 </div>
             </div>
-        </section>
-        <section id="design">
-            <h2>Design Tools</h2>
-            <p>Use the canvas below to sketch your architectural designs.</p>
-            <div class="canvas-container">
-                <canvas id="designCanvas" width="800" height="600"></canvas>
+            <nav class="sidebar-nav">
+                <a href="#dashboard" class="active">Dashboard</a>
+                <a href="#design">Design Tools</a>
+                <a href="#calculations">Calculations</a>
+                <a href="#resources">Resources</a>
+                <a href="#projects">Projects</a>
+            </nav>
+            <div class="sidebar-footer">
+                <button>Logout</button>
             </div>
-            <div class="controls">
-                <button id="drawBtn">Draw Mode</button>
-                <button id="clearBtn">Clear Canvas</button>
-            </div>
-        </section>
-        <section id="calculations">
-            <h2>Calculations</h2>
-            <p>Calculate areas and other specifications.</p>
-            <div class="calc-form">
-                <label for="length">Length (m):</label>
-                <input type="number" id="length" placeholder="Enter length">
-                <label for="width">Width (m):</label>
-                <input type="number" id="width" placeholder="Enter width">
-                <button id="calcArea">Calculate Area</button>
-                <p id="areaResult"></p>
-            </div>
-        </section>
-        <section id="resources">
-            <h2>Resources</h2>
-            <p>Useful links and references for architects.</p>
-            <ul>
-                <li><a href="#" target="_blank">Material Guide</a></li>
-                <li><a href="#" target="_blank">Building Codes</a></li>
-                <li><a href="#" target="_blank">Project Examples</a></li>
-            </ul>
-        </section>
-        <section id="projects">
-            <h2>Project Management</h2>
-            <p>Manage your architectural projects.</p>
-            <button id="addProject">Add New Project</button>
-            <ul id="projectList"></ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Architect Engineer Platform</p>
-    </footer>
+        </aside>
+        <div class="workspace">
+            <header class="topbar">
+                <div class="greeting">
+                    <div class="avatar"></div>
+                    <div>
+                        <p class="hello">Hello Olivia Wilson</p>
+                        <span class="subtitle">Welcome back to your design studio</span>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <input type="search" placeholder="Search projects...">
+                </div>
+            </header>
+            <main class="content">
+                <section id="dashboard" class="section-dashboard">
+                    <div class="section-header">
+                        <div>
+                            <h1>Performance Overview</h1>
+                            <p>Track your project progress, estimates, and design performance.</p>
+                        </div>
+                    </div>
+                    <div class="cards-grid">
+                        <article class="card card-small">
+                            <span>Production Volume</span>
+                            <strong>10.431</strong>
+                        </article>
+                        <article class="card card-small">
+                            <span>Order Volume</span>
+                            <strong>7.061</strong>
+                        </article>
+                        <article class="card card-small">
+                            <span>Sales Revenue</span>
+                            <strong>$29m</strong>
+                        </article>
+                        <article class="card card-small card-highlight">
+                            <span>Total Machines</span>
+                            <strong>267</strong>
+                        </article>
+                    </div>
+                    <div class="dashboard-grid">
+                        <article class="card card-chart">
+                            <div class="card-title">Quarterly Trend</div>
+                            <div class="chart-line">
+                                <div class="line line-one"></div>
+                                <div class="line line-two"></div>
+                                <div class="line line-three"></div>
+                            </div>
+                        </article>
+                        <article class="card card-mini">
+                            <div class="card-title">Production Costs</div>
+                            <p>$1.137.061</p>
+                            <div class="status-list">
+                                <span>Downtime Causes</span>
+                                <div class="status-item"><span class="dot pink"></span>Broken Machine</div>
+                                <div class="status-item"><span class="dot blue"></span>Human Error</div>
+                                <div class="status-item"><span class="dot white"></span>Breaks</div>
+                            </div>
+                        </article>
+                        <article class="card card-mini">
+                            <div class="card-title">Waste Produced</div>
+                            <p>789.03</p>
+                            <div class="mini-chart"></div>
+                        </article>
+                    </div>
+                </section>
+                <section id="design" class="section-panel">
+                    <div class="panel-header">
+                        <h2>Design Tools</h2>
+                        <p>Sketch floor plans and test concept layouts directly in the canvas.</p>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="designCanvas" width="940" height="420"></canvas>
+                    </div>
+                    <div class="controls">
+                        <button id="drawBtn">Enable Draw</button>
+                        <button id="clearBtn">Clear Canvas</button>
+                    </div>
+                </section>
+                <section id="calculations" class="section-panel">
+                    <div class="panel-header">
+                        <h2>Calculations</h2>
+                        <p>Generate accurate area estimates for your design spaces.</p>
+                    </div>
+                    <div class="calc-panel">
+                        <div>
+                            <label for="length">Length (m)</label>
+                            <input type="number" id="length" placeholder="Enter length">
+                        </div>
+                        <div>
+                            <label for="width">Width (m)</label>
+                            <input type="number" id="width" placeholder="Enter width">
+                        </div>
+                        <button id="calcArea">Calculate Area</button>
+                    </div>
+                    <p id="areaResult" class="calc-result"></p>
+                </section>
+                <section id="resources" class="section-panel">
+                    <div class="panel-header">
+                        <h2>Resources</h2>
+                        <p>Access quick references for materials, codes, and project examples.</p>
+                    </div>
+                    <div class="resource-grid">
+                        <a href="#" class="resource-card">Material Guide</a>
+                        <a href="#" class="resource-card">Building Codes</a>
+                        <a href="#" class="resource-card">Project Examples</a>
+                    </div>
+                </section>
+                <section id="projects" class="section-panel">
+                    <div class="panel-header">
+                        <h2>Project Management</h2>
+                        <p>Track active projects and add new entries quickly.</p>
+                    </div>
+                    <button id="addProject" class="primary-button">Add New Project</button>
+                    <ul id="projectList" class="project-list"></ul>
+                </section>
+            </main>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
